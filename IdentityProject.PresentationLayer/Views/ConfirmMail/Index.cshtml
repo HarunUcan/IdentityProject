@@ -1,0 +1,22 @@
+﻿@model ConfirmMailViewModel
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+
+    <br />
+    <br />
+
+    <form method="post">
+        <h3 class="d-flex justify-content-center">Mail Adresine Gelen 6 Haneli Kodu Giriniz</h3>
+        <br />
+        <input type="text" class="form-control border border-warning" asp-for="ConfirmCode"/>
+        <br />
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-success"><p class="h3">Onayla</p></button>
+        </div>
+    </form>
+</div>

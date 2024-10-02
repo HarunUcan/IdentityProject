@@ -1,3 +1,5 @@
+using FluentValidation.AspNetCore;
+using IdentityProject.BusinessLayer.ValidationRules.AppUserValidationRules;
 using IdentityProject.DataAccessLayer.Concrete;
 using IdentityProject.EntityLayer.Concrete;
 using IdentityProject.PresentationLayer.Models;
@@ -8,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddDbContext<Context>();
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>();
 var app = builder.Build();
